@@ -8,16 +8,11 @@ baseurl: '/PanelCV' #change it according to your repository name
 # Profile information
 yourname: Hao-Ning Wu  ## put your name
 title: 'NYU CS 2021'  ## your title
-location: New York, NYU
+location: New York, NY
 
 
 ## Social Profiles
 github: https://github.com/wuhoward
-#twitter: http://www.twitter.com  ## your twitter account url
-linkedin: https://www.linkedin.com/in/haoningwu/  ## your linkedin account url
-#dribbble: http://www.dribble.com  ## you dribbble account url
-#foursquare: http://www.foursquare.com  ## your foursquare account url
-
-
+linkedin: https://www.linkedin.com/in/haoningwu/
 
 # Update all the sections by editing the files inside _includes folder.
