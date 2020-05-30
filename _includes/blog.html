@@ -91,18 +91,13 @@
                                 </div>
 
                                 <div class="clear"></div>   
-                                {% if forloop.first %}
-                                    {% assign prev_post = "#" %}
-                                {% else %}
-                                    {% assign prev_post = post.previous.id | remove: "/" | prepend: "#post-" %}
-                                {% endif %}
-                                {% assign next_post = "#" %}
-                                {% unless forloop.last %}
-                                    {% assign next_post = post.next.id | remove: "/" | prepend: "#post-" %}
-                                {% endunless %}
+                                {% assign prev_prefix = "#post-" %}
+                                {% assign next_prefix = "#post-" %}
+                                {% if forloop.first %}{% assign prev_prefix = "#" %}{% endif %}
+                                {% if forloop.last %}{% assign next_prefix = "#" %}{% endif %}
                                 <div class="col-md-12"  style="margin-top: 20px;">
-                                    <a href="{{ next_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                                    <a href="{{ prev_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                                    <a href="{{ post.next.id | remove: "/" | prepend: next_prefix }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                                    <a href="{{ post.previous.id | remove: "/" | prepend: prev_prefix }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
                                     <a href="#blog" class="readmore"><i class="glyphicon glyphicon-chevron-left"></i> All Posts</a>
                                 </div>
 
