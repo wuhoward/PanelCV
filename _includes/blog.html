@@ -91,8 +91,9 @@
                                 </div>
 
                                 <div class="clear"></div>       
-                                {% capture prev_post %}#post-{{ post.previous.id | remove: "/" }}{% endcapture %}
-                                {% assign next_post = post.id | remove: "/" %}
+                                
+                                {% assign prev_post = post.id | remove: "/" %}{% assign prev_post = prev_post | prepend: "#post-" %}
+                                {% assign next_post = post.id | remove: "/" %}{% assign next_post = next_post | prepend: "#post-" %}
                                 {% if forloop.first %}{% assign prev_post = "#" %}{% endif %}
                                 {% if forloop.last %}{% assign next_post = "#" %}{% endif %}
                                 <div class="col-md-12"  style="margin-top: 20px;">
