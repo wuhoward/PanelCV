@@ -12,7 +12,7 @@
 
                 <div class="clear"></div>
                 {% for post in site.posts %}
-                    <article id="{{ post.id }}" class="blog-article">                    
+                    <article id="{{ post.id | remove: "/" }}" class="blog-article">                    
 
                         <div class="col-md-12">
 
@@ -47,7 +47,7 @@
                                         </div>
                                     </div>	
 
-                                    <a href="#{{ post.id }}" class="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
+                                    <a href="#{{ post.id | remove: "/" }}" class="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
 
                                 </div>
                             </div>
@@ -66,7 +66,7 @@
             <!-- End Page Blog -->
             
             {% for post in site.posts %}
-            <section id="{{ post.id }}-page" class="content-post" style="display: none">
+            <section id="{{ post.id | remove: "/" }}-page" class="content-post" style="display: none">
                 <div class="row inner">
 
                     <div class="col-md-12" style="width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;float: left;background: rgba(255, 255, 255, 0.8);padding-bottom: 15px;padding-top: 15px;">
@@ -102,8 +102,8 @@
 
 
                                 <div class="col-md-12"  style="margin-top: 20px;">
-                                    <a href="#{{ post.next.id }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                                    <a href="#{{ post.previous.id }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                                    <a href="#{{ post.next.id | remove: "/"  }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                                    <a href="#{{ post.previous.id | remove: "/" }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
                                     <a href="#blog" class="readmore"><i class="glyphicon glyphicon-chevron-left"></i> All Posts</a>
                                 </div>
 
