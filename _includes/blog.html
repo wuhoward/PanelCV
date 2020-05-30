@@ -91,12 +91,13 @@
                                 </div>
 
                                 <div class="clear"></div>       
-
-                                {% assign next_post = post.next.id | remove: "/" %}
-                                {% assign prev_post = post.next.id | remove: "/" %}
+                                {% assign prev_post = "#post-" | append: post.prev.id | remove: "/" %}
+                                {% assign next_post = "#post-" | append: post.next.id | remove: "/" %}
+                                {% if forloop.first %}{% assign prev_post = "" %}{% endif %}
+                                {% if forloop.last %}{% assign prev_post = "" %}{% endif %}
                                 <div class="col-md-12"  style="margin-top: 20px;">
-                                    <a href="#post-{{ prev_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                                    <a href="#post-{{ next_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                                    <a href="{{ prev_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                                    <a href="{{ next_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
                                     <a href="#blog" class="readmore"><i class="glyphicon glyphicon-chevron-left"></i> All Posts</a>
                                 </div>
 
