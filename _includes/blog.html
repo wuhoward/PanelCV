@@ -93,8 +93,8 @@
                                 <div class="clear"></div>       
                                 {% assign prev_post = post.prev.id | remove: "/" | prepend: "#post-" %}
                                 {% assign next_post = post.next.id | remove: "/" | prepend: "#post-" %}
-                                {% if forloop.first %}{% assign prev_post = "" %}{% endif %}
-                                {% if forloop.last %}{% assign prev_post = "" %}{% endif %}
+                                {% if forloop.first %}{% assign prev_post = "#" %}{% endif %}
+                                {% if forloop.last %}{% assign next_post = "#" %}{% endif %}
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <a href="{{ prev_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
                                     <a href="{{ next_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
