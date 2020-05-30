@@ -96,12 +96,10 @@
                                 {% else %}
                                     {% assign prev_post = post.previous.id | remove: "/" | prepend: "#post-" %}
                                 {% endif %}
-                                {% if forloop.last %}
-                                    {% assign next_post = "#" %}
-                                {% else %}
+                                {% assign next_post = "#" %}
+                                {% unless forloop.last %}
                                     {% assign next_post = post.next.id | remove: "/" | prepend: "#post-" %}
-                                {% endif %}
-                                {% assign prev_post = post.previous.id | remove: "/" | prepend: "#post-" %}
+                                {% endunless %}
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <a href="{{ next_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
                                     <a href="{{ prev_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
