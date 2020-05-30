@@ -91,7 +91,7 @@
                                 </div>
 
                                 <div class="clear"></div>       
-                                {% capture prev_post %}#post-{{post.prev.id | remove: "/"}}{% endcapture %}
+                                {% capture prev_post %}#post-{{post.previous.id | remove: "/"}}{% endcapture %}
                                 {% assign next_post = post.next.id | remove: "/" | prepend: "#post-" %}
                                 {% if forloop.first %}{% assign prev_post = "#" %}{% endif %}
                                 {% if forloop.last %}{% assign next_post = "#" %}{% endif %}
