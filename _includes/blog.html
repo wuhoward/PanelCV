@@ -90,8 +90,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="clear"></div>       
-                                {% assign next_post = post.next.id | remove: "/" %}{% assign next_post = next_post | prepend: "#post-" %}
+                                <div class="clear"></div>   
                                 {% if forloop.first %}
                                     {% assign prev_post = "#" %}
                                 {% else %}
@@ -102,6 +101,7 @@
                                 {% else %}
                                     {% assign next_post = post.next.id | remove: "/" | prepend: "#post-" %}
                                 {% endif %}
+                                {% assign prev_post = post.previous.id | remove: "/" | prepend: "#post-" %}
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <a href="{{ next_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
                                     <a href="{{ prev_post }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
