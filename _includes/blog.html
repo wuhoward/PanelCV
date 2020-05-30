@@ -33,7 +33,7 @@
                                         <div class="top_c ">
 
                                             <div class="title_content">
-                                                <div class="text_content"><a href="#{{ post.id }}" class="read_more">{{ post.title }}</a></div>
+                                                <div class="text_content"><a href="#{{ post.id | remove: "/" }}" class="read_more">{{ post.title }}</a></div>
                                                 <div class="clear"></div>
                                             </div>
 
@@ -87,7 +87,7 @@
                             </div>
 
 
-                            <p class="caps"></p>
+                            <p class="caps"{{ post.content }}></p>
                             
                             <div class="col-md-12 first">
                                 <div class="info">
