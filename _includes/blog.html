@@ -91,10 +91,11 @@
                                 </div>
 
                                 <div class="clear"></div>   
+                                <!-- for loop is in reversed order, newest to oldest post -->
                                 {% assign prev_prefix = "#post-" %}
                                 {% assign next_prefix = "#post-" %}
-                                {% if forloop.first %}{% assign prev_prefix = "#" %}{% endif %}
-                                {% if forloop.last %}{% assign next_prefix = "#" %}{% endif %}
+                                {% if forloop.last %}{% assign prev_prefix = "#" %}{% endif %}
+                                {% if forloop.first %}{% assign next_prefix = "#" %}{% endif %}
                                 <div class="col-md-12"  style="margin-top: 20px;">
                                     <a href="{{ post.next.id | remove: "/" | prepend: next_prefix }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
                                     <a href="{{ post.previous.id | remove: "/" | prepend: prev_prefix }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
