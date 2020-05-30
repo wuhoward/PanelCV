@@ -92,7 +92,6 @@
 
                                 <div class="clear"></div>       
                                 {% capture prev_post %}{{ post.previous.id | remove: "/" }}{% endcapture %}
-                                {% assign prev_post = prev_post | prepend: "#post-" %}
                                 {% assign next_post = post.next.id | remove: "/" %}{% assign next_post = next_post | prepend: "#post-" %}
                                 {% if forloop.first %}{% assign prev_post = "#" %}{% endif %}
                                 {% if forloop.last %}{% assign next_post = "#" %}{% endif %}
