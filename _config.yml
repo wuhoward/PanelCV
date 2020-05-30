@@ -6,10 +6,28 @@ baseurl: '/PanelCV' #change it according to your repository name
 
 
 # Profile information
+locale: "en-US"
 yourname: Hao-Ning Wu  ## put your name
 title: 'NYU CS 2021'  ## your title
 location: New York, NY
 
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 ## Social Profiles
 github: https://github.com/wuhoward
