@@ -12,7 +12,7 @@
 
                 <div class="clear"></div>
                 {% for post in site.posts %}
-                    <article id="{{ post.title }}" class="blog-article">                    
+                    <article id="{{ post.id }}" class="blog-article">                    
 
                         <div class="col-md-12">
 
@@ -33,12 +33,12 @@
                                         <div class="top_c ">
 
                                             <div class="title_content">
-                                                <div class="text_content"><a href="#post-2" class="read_more">Blog Aside post</a></div>
+                                                <div class="text_content"><a href="#post-2" class="read_more">{{ post.title }}</a></div>
                                                 <div class="clear"></div>
                                             </div>
 
                                             <ul class="info">
-                                                <li><i class="glyphicon glyphicon-time"></i> {{ post.date }} </li>
+                                                <li><i class="glyphicon glyphicon-time"></i> {{ page.date | date: "%B %-d, %Y" }} </li>
                                                 <li><i class="glyphicon glyphicon-tag"></i> {{ post.tags }} </li>
                                             </ul>
 
@@ -47,7 +47,7 @@
                                         </div>
                                     </div>	
 
-                                    <a href="{{ post.url }}" class="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
+                                    <a href="{{ post.id }}" class="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
 
                                 </div>
                             </div>
@@ -64,6 +64,57 @@
             </section>
 
             <!-- End Page Blog -->
+            
+            {% for post in site.posts %}
+            <section id="{{ post.id }}-page" class="content-post" style="display: none">
+                <div class="row inner">
+
+                    <div class="col-md-12" style="width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;float: left;background: rgba(255, 255, 255, 0.8);padding-bottom: 15px;padding-top: 15px;">
+
+                        <article class="postPage">
+
+                            <div class="col-md-12 post_media">
+
+                                <div class="post-format-icon">
+                                    <a href="#" class="item-date"><span class="fa fa-pencil"></span></a>
+                                </div>
+
+                            </div>
+
+                            <div class="title_content">
+                                <div class="text_content">{{ post.title }}</div>
+                                <div class="clear"></div>
+                            </div>
+
+
+                            <p class="caps"></p>
+                            
+                            <div class="col-md-12 first">
+                                <div class="info">
+
+                                    <ul class="info-post">
+                                        <li><i class="glyphicon glyphicon-time"></i> {{ page.date | date: "%B %-d, %Y" }}</li>
+                                        <li><i class="glyphicon glyphicon-tag"></i> {{ post.tags }}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="clear"></div>       
+
+
+                                <div class="col-md-12"  style="margin-top: 20px;">
+                                    <a href="{{ page.next.id }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                                    <a href="{{ page.previous.id }}" class="readmore" id="pagination"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                                    <a href="#blog" class="readmore"><i class="glyphicon glyphicon-chevron-left"></i> All Posts</a>
+                                </div>
+
+                                <div class="clear"></div>
+
+                        </article>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+            {% endfor %}
 
         </div>
 
