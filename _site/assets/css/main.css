@@ -651,6 +651,7 @@ h2.resp-accordion:hover {
 .portfolio .label {
     position: absolute;
     width: 100%;
+    margin: 0;
     height:60px;
     bottom:-60px;
     display: block !important;
