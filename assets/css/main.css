@@ -1371,7 +1371,7 @@ ul.about {
     padding-top:0;
 }
 
-.blog-article .post_content ul,li{
+.postPage ul,li{
     list-style-type: circle;
 }
 
