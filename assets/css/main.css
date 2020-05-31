@@ -1372,19 +1372,13 @@ ul.about {
 }
 
 .postPage ul{
-    margin-left:10px;
-}
-
-.postPage ul > li{
     list-style-type: circle;
+    margin-left:20px;
 }
 
 .postPage ol{
-    margin-left:10px;
-}
-
-.postPage ol > li{
     list-style-type: decimal;
+    margin-left:20px;
 }
 
 
