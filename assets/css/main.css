@@ -1371,6 +1371,10 @@ ul.about {
     padding-top:0;
 }
 
+.blog-article .post_content ul,li{
+    list-style-type: circle;
+}
+
 .blog-article .post_media_detail{
     width: 100% !important;
     -webkit-box-sizing: border-box !important;
@@ -1807,10 +1811,6 @@ ul.info-post li {
     background: rgba(100, 100, 100, 0.1);
     margin-bottom: 15px;
     margin-top: 15px;
-}
-
-.blog-article ul {
-  list-style-type: circle;
 }
 
 .prg_content {
