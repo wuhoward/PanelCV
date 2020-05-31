@@ -1372,17 +1372,17 @@ ul.about {
 }
 
 .postPage .main_content ul{
-    list-style-position: inside;
     list-style-type: disc;
     margin-left:30px;
 }
 
 .postPage .main_content ol{
-    list-style-position: inside;
     list-style-type: decimal;
     margin-left:30px;
 }
-
+.postPage .main_content li{ 
+    display: list-item; 
+}
 
 .blog-article .post_media_detail{
     width: 100% !important;
