@@ -3,8 +3,6 @@ title: My Resume
 url: 'https://wuhoward.github.io'
 baseurl: '/wuhoward.github.io'  #change it according to your repository name
 
-
-
 # Profile information
 locale: "en-US"
 yourname: Hao-Ning Wu  ## put your name
@@ -13,7 +11,6 @@ location: New York, NY
 
 # Conversion
 markdown: kramdown
-mathjax: true
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
