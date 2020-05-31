@@ -2786,10 +2786,10 @@ li h6{
 
 
 #blog .post_med .post-format-icon:before {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     text-align: center;
-    line-height: 55px;
+    line-height: 45px;
     font-size: 28px;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
@@ -2801,8 +2801,8 @@ li h6{
 
 #blog .post_med a.item-date {
     left: 0;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     text-align: center;
     position: absolute;
     top: 0;
