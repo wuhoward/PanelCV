@@ -2824,7 +2824,7 @@ li h6{
     display: block;
     clear: both;
     font-size: 12px;
-    margin-bottom: -8px;
+    margin-bottom: -10px;
     color: #FFF !important;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
