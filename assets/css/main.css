@@ -1371,9 +1371,16 @@ ul.about {
     padding-top:0;
 }
 
-.postPage ul,li{
+.postPage ul{
     list-style-type: circle;
+    margin-left:10px;
 }
+
+.postPage ol{
+    list-style-type: decimal;
+    margin-left:10px;
+}
+
 
 .blog-article .post_media_detail{
     width: 100% !important;
