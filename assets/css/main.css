@@ -1372,16 +1372,13 @@ ul.about {
 }
 
 .postPage .main_content ul{
-    list-style-type: disc;
     margin-left:30px;
+    list-style-type: disc;
 }
 
 .postPage .main_content ol{
-    list-style-type: decimal;
     margin-left:30px;
-}
-.postPage .main_content li{ 
-    display: list-item; 
+    list-style-type: decimal;
 }
 
 .blog-article .post_media_detail{
