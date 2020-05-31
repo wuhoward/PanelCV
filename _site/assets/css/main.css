@@ -637,7 +637,8 @@ h2.resp-accordion:hover {
 }
 
 .portfolio-wrapper {
-    word-wrap: break-word;
+    overflow:hidden;
+    overflow-wrap: break-word;
     position: relative !important;
     background: #666;
     cursor:pointer;
