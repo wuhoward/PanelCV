@@ -1809,6 +1809,10 @@ ul.info-post li {
     margin-top: 15px;
 }
 
+.blog-article ul {
+  list-style-type: circle;
+}
+
 .prg_content {
     background-color: #f7f7f7;
     color: #999;
