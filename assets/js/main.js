@@ -418,7 +418,7 @@ jQuery(document).ready(function($) {
     /* -------------------------------- skillbar ---------------------------- */
     /* ---------------------------------------------------------------------- */
 
-    $('.tabs-resume').on("click touchstart ", function() {
+    $('.tabs-resume').on("click touchstart tap", function() {
 
         $('.skillbar').each(function() {
             $(this).find('.skillbar-bar').width(0);
