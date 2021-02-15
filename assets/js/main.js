@@ -332,7 +332,7 @@ jQuery(document).ready(function($) {
     });
 
     // More blog
-    $('a.read_more').click(function() {
+    /*$('a.read_more').click(function() {
         var pagina = $(this).attr('href');
         var postdetail = pagina + '-page';
 
@@ -362,7 +362,7 @@ jQuery(document).ready(function($) {
 
         return false;
 
-    });
+    });*/
 
     //pagination blog
     $('.content-post #pagination').click(function() {
