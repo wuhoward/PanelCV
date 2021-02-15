@@ -315,7 +315,7 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
 
     // More blog
-    $('a.read_m').click(function() {
+    /*$('a.read_m').click(function() {
         var pagina = $(this).attr('href');
         var postdetail = pagina + '-page';
 
@@ -332,7 +332,7 @@ jQuery(document).ready(function($) {
     });
 
     // More blog
-    /*$('a.read_more').click(function() {
+    $('a.read_more').click(function() {
         var pagina = $(this).attr('href');
         var postdetail = pagina + '-page';
 
