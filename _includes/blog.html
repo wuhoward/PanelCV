@@ -31,7 +31,7 @@
                                         <div class="top_c ">
 
                                             <div class="title_content">
-                                                <div class="text_content"><a href="{{ post.url }}" target="_blank "class="read_more">{{ post.title }}</a></div>
+                                                <div class="text_content"><a href="{{ post.note_link }}" target="_blank "class="read_more">{{ post.title }}</a></div>
                                                 <div class="clear"></div>
                                             </div>
                                             
@@ -46,7 +46,7 @@
                                         </div>
                                     </div>	
 
-                                    <a href="#post-{{ post.id | remove: "/" }}" class="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
+                                    <a href="{{ post.note_link }}" class="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
 
                                 </div>
                             </div>
